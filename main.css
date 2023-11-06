@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body {
   width: 100%;
@@ -11,8 +13,144 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1920px;
+}
+.content {
+  width: 80%;
+  max-width: 1920px;
   padding: 0 20px;
   text-align: center;
   margin: 0 auto;
+  margin-left: 18%;
+}
+header {
+  width: 80%;
+  padding: 32px 20px 24px;
+  border: 1px solid aqua;
+  margin-left: 18%;
+  position: relative;
+}
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #2d317a;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+header .headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headerLeft {
+  position: relative;
+}
+header .headerLeft input {
+  width: 300px;
+  height: 32px;
+  border-radius: 25px;
+  background: #161245;
+  box-shadow: 0px 4px 20px 0px rgba(3, 16, 52, 0.5);
+  border: none;
+  outline-color: #1288e8;
+}
+header .headerLeft img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 5px;
+  right: 10px;
+}
+header .headerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+header .headerRight .img1 {
+  position: absolute;
+  right: 13%;
+  top: 30px;
+}
+header .headerRight .img2 {
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  right: 5%;
+}
+
+.dashBoard {
+  position: fixed;
+  width: 15%;
+  max-width: 300px;
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px 0;
+}
+.dashBoard .dashTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  padding-left: 20%;
+}
+.dashBoard .dashTop h2 {
+  text-shadow: 0px 5px 12px rgba(6, 5, 19, 0.25);
+  font-family: Raleway !important;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    272deg,
+    #3887fe 4.26%,
+    #3ba0ff 51.37%,
+    #5fb2ff 99.01%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 24px 0 20px;
+}
+.dashBoard .dashTop h2::after {
+  content: "";
+  display: block;
+  width: 99.996px;
+  height: 2px;
+  background: #1288e8;
+}
+.dashBoard .dashTop .box,
+.dashBoard .dashBottom .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.dashBoard .dashTop .box a,
+.dashBoard .dashBottom .box p {
+  color: #616a8b;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.dashBoard .dashBottom {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20%;
+}
+.dashBoard .dashBottom .box2 {
+  cursor: pointer;
 }
