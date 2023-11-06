@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-     
-</body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container singup">
+      <div class="mainLeft">
+        <h3>Welcome</h3>
+        <form name="singUp">
+          <div class="inpName">
+            <div class="circle">
+              <img src="../../public/img/login_acc.svg" alt="accaunt" />
+            </div>
+            <input type="text" name="name" placeholder="name" />
+          </div>
+          <div class="inpSurname">
+            <div class="circle">
+              <img src="../../public/img/login_acc.svg" alt="accaunt" />
+            </div>
+            <input type="text" name="surname" placeholder="surname" />
+          </div>
+
+          <div class="inpEmail">
+            <div class="circle">
+              <img src="../../public/img/login_acc.svg" alt="accaunt" />
+            </div>
+            <input type="text" name="email" placeholder="email or login" />
+          </div>
+          <div class="inpPassword">
+            <img id="img1" src="../../public/img/login_key.svg" alt="key" />
+            <input
+              id="inp"
+              type="password"
+              name="password"
+              placeholder="password"
+            />
+            <img id="img2" src="../../public/img/login_eye.svg" alt="eye" />
+          </div>
+          <div class="btns">
+            <button type="button" class="btn_active">SIGN UP</button>
+            <button type="submit">SUBMIT</button>
+            <a href="/pages/login/"><button type="button">SING IN</button></a>
+          </div>
+        </form>
+      </div>
+      <div class="mainRight">
+        <h2>VALUET</h2>
+        <span></span>
+        <p>Your currency dashboard</p>
+      </div>
+      <div class="images">
+        <img
+          id="absImg1"
+          src="../../public/img/login_triangleOrange.svg"
+          alt="triangle"
+        />
+        <img
+          id="absImg2"
+          src="../../public/img/login_square.png"
+          alt="square"
+        />
+        <img
+          id="absImg3"
+          src="../../public/img/login_triangle.svg"
+          alt="triangle"
+        />
+        <img
+          id="absImg5"
+          src="../../public/img/login_bg_bottom.png"
+          alt="triangle"
+        />
+        <img
+          id="absImg4"
+          src="../../public/img/login_bg_top.png"
+          alt="triangle"
+        />
+      </div>
+    </main>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
