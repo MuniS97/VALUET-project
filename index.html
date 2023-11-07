@@ -1,14 +1,318 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VALUET</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@800&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="./modules/guardian.js"></script>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="container">
+    <main class="content">
+      <div class="top">
+        <div class="topLeft">
+          <h2>Overview</h2>
+          <p>Data</p>
+        </div>
+        <button>Add widget</button>
+      </div>
+      <div class="statistics">
+        <div id="balance">
+          <h3>Balance</h3>
+          <div class="chartblock"><canvas id="balance1"></canvas></div>
+          <div id="bal1">
+            <div>
+              <img src="./public/img/balance (1).svg" alt="bol" />
+              <p>Ethereum</p>
+            </div>
+            <p>15%</p>
+          </div>
+          <div id="bal2">
+            <div>
+              <img src="./public/img/balance (2).svg" alt="bol" />
+              <p>Bitcoin</p>
+            </div>
+            <p>74%</p>
+          </div>
+          <div id="bal3">
+            <div>
+              <img src="./public/img/balance (3).svg" alt="bol" />
+              <p>Dash</p>
+            </div>
+            <p>38%</p>
+          </div>
+        </div>
+        <div id="spending">
+          <div>
+            <h2>Spending</h2>
+            <select>
+              <option value="">January</option>
+              <option value="">February</option>
+              <option value="">March</option>
+              <option value="">Aprel</option>
+              <option value="">May</option>
+              <option value="">June</option>
+              <option value="">July</option>
+              <option value="">August</option>
+              <option value="">September</option>
+              <option value="">October</option>
+              <option value="">November</option>
+              <option value="">December</option>
+            </select>
+          </div>
+          <div class="totalSpending">
+            <h4>$ 5,443.57</h4>
+            <p>total spending</p>
+          </div>
+          <canvas id="spending2"></canvas>
+        </div>
+        <div id="bitcoin">
+          <div class="crypleft">
+            <h4>BitCoin</h4>
+            <div class="imgDiv">
+              <img src="./public/img/bitcoin2.svg" alt="" />
+              <img src="./public/img/bitcoin.svg" alt="" />
+            </div>
+            <div class="price">
+              <h5>600 BTC</h5>
+              <p>$30,000,000</p>
+            </div>
+          </div>
+          <div class="crypright">
+            <div class="crypright_block">
+              <img src="./public/img/line up.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+        </div>
+        <div id="gridcoin">
+          <div class="crypleft">
+            <h4>GridCoin</h4>
+            <div class="imgDiv">
+              <img src="./public/img/gridcoin (2).svg" alt="" />
+              <img src="./public/img/gridcoin (1).svg" alt="" />
+            </div>
+            <div class="price">
+              <h5>600 BTC</h5>
+              <p>$30,000,000</p>
+            </div>
+          </div>
+          <div class="crypright">
+            <div class="crypright_block">
+              <img src="./public/img/line up.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+        </div>
+        <div id="ethereum">
+          <div class="crypleft">
+            <h4>Ethereum</h4>
+            <div class="imgDiv">
+              <img src="./public/img/ethereum (2).svg" alt="" />
+              <img src="./public/img/ethereum (1).svg" alt="" />
+            </div>
+            <div class="price">
+              <h5>600 BTC</h5>
+              <p>$30,000,000</p>
+            </div>
+          </div>
+          <div class="crypright">
+            <div class="crypright_block">
+              <img src="./public/img/line up.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+        </div>
+        <div id="aeternity">
+          <div class="crypleft">
+            <h4>Aeternity</h4>
+            <div class="imgDiv">
+              <img src="./public/img/eternity (1).svg" alt="" />
+              <img src="./public/img/eternity (2).svg" alt="" />
+            </div>
+            <div class="price">
+              <h5>600 BTC</h5>
+              <p>$30,000,000</p>
+            </div>
+          </div>
+          <div class="crypright">
+            <div class="crypright_block">
+              <img src="./public/img/line up.svg" alt="" />
+              <div>
+                <h6>$1 200=0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+            <div class="crypright_block">
+              <img src="./public/img/line down.svg" alt="" />
+              <div>
+                <h6>$1 200= 0,074 BTC</h6>
+                <p>1 BTC = $6 542, 35</p>
+              </div>
+            </div>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="market">
+          <div class="top">
+            <div>
+              <h4>Market</h4>
+              <select>
+                <option value="">Bitcoin</option>
+                <option value="">GridCoin</option>
+                <option value="">Ethereum</option>
+                <option value="">Aeternity</option>
+              </select>
+            </div>
+            <select>
+              <option value="">January</option>
+              <option value="">February</option>
+              <option value="">March</option>
+              <option value="">Aprel</option>
+              <option value="">May</option>
+              <option value="">June</option>
+              <option value="">July</option>
+              <option value="">August</option>
+              <option value="">September</option>
+              <option value="">October</option>
+              <option value="">November</option>
+              <option value="">December</option>
+            </select>
+          </div>
+          <canvas id="marketChart"></canvas>
+        </div>
+
+        <div id="news">
+          <div class="top"><h4>Recent news</h4></div>
+          <div class="cart-container">
+            <!-- <div class="scrollable"> -->
+            <table>
+              <tbody>
+                <tr>
+                  <td>19 hours ago</td>
+                  <td>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolore esse iusto impedit explicabo illum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>19 hours ago</td>
+                  <td>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolore esse iusto impedit explicabo illum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>19 hours ago</td>
+                  <td>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolore esse iusto impedit explicabo illum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>19 hours ago</td>
+                  <td>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolore esse iusto impedit explicabo illum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>19 hours ago</td>
+                  <td>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolore esse iusto impedit explicabo illum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>19 hours ago</td>
+                  <td>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolorem dolore esse iusto impedit explicabo illum.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
     <script type="module" src="./main.js"></script>
+    <script type="module" src="./modules/analytics.js"></script>
   </body>
 </html>
