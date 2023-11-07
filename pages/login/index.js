@@ -17,7 +17,9 @@ form.onsubmit = (e) => {
     if (!res) return;
     if (res.status !== 200 && res.status !== 201) return;
     if (res.data.length === 0) {
-      alert("not found");
+      setTimeout(() => {
+        alert("not found");
+      }, 500);
       return;
     }
 
@@ -28,7 +30,9 @@ form.onsubmit = (e) => {
       localStorage.setItem("user", JSON.stringify(res_user));
       location.assign("/");
     } else {
-      alert("wrong password");
+      setTimeout(() => {
+        alert("wrong password");
+      }, 500);
     }
   });
 };

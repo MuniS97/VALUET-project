@@ -24,7 +24,7 @@ form.onsubmit = (e) => {
         alert("success");
         setTimeout(() => {
           location.assign("/pages/login/");
-        }, 1000);
+        }, 500);
       } else {
         alert("smth got wrong. Please try again!");
       }

@@ -117,7 +117,7 @@ export function dashboard_create(user) {
   bBlock2Text.onclick = () => {
     let conf = confirm("Are you sure that you want log out?");
     if (conf) {
-      let conf2 = confirm("Maybe you want stay?");
+      let conf2 = confirm("Are you really really sure? Maybe you want stay?");
       if (conf2) {
         localStorage.clear();
         setTimeout(() => {
