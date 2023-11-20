@@ -34,6 +34,7 @@ export function headerCreate() {
   headerLeft.append(headerLeftInp, headerLeftImg);
   headerRight.append(headerRightImg1, headerRightImg2);
 }
+
 export function dashboard_create(user) {
   let dashBoard = document.createElement("div");
   let dashTop = document.createElement("div");
@@ -114,6 +115,34 @@ export function dashboard_create(user) {
   bottomBlock1.append(bBlock1Img, bBlock1Text);
   bottomBlock2.append(bBlock2Img, bBlock2Text);
 
+  let locate = location.pathname.split("/")[2] || "home";
+
+  switch (locate) {
+    case "home":
+      topBlock1.classList.add("btn_active");
+      block1Img.src = "../../public/img/dash_overviews1.svg";
+      break;
+    case "wallets":
+      topBlock2.classList.add("btn_active");
+      block2Img.src = "../../public/img/dash_wallets1.svg";
+      break;
+    case "transactions":
+      topBlock3.classList.add("btn_active");
+      block3Img.src = "../../public/img/dash_transactions1.svg";
+      break;
+    case "exChange":
+      topBlock5.classList.add("btn_active");
+      block5Img.src = "../../public/img/dash_market1.svg";
+      break;
+    case "market":
+      topBlock4.classList.add("btn_active");
+      block4Img.src = "../../public/img/dash_exchange1.svg";
+      break;
+
+    default:
+      break;
+  }
+
   bBlock2Text.onclick = () => {
     let conf = confirm("Are you sure that you want log out?");
     if (conf) {
@@ -126,4 +155,46 @@ export function dashboard_create(user) {
       }
     }
   };
+}
+
+export function reload_wallets(arr, place) {
+  place.innerHTML = "";
+
+  let wallet_color = 1;
+
+  if (arr.length == 0) {
+    let p = document.createElement("p");
+    p.innerHTML = "NO WALLETS";
+    p.style.color = "red";
+    place.append(p);
+    return;
+  }
+
+  for (let item of arr) {
+    let box = document.createElement("div");
+    let h2 = document.createElement("h2");
+    let p = document.createElement("p");
+
+    box.classList.add("box");
+
+    if (wallet_color == 1) {
+      box.classList.add("bg_one");
+      wallet_color++;
+    } else if (wallet_color == 2) {
+      box.classList.add("bg_two");
+      wallet_color++;
+    } else if (wallet_color == 3) {
+      box.classList.add("bg_three");
+      wallet_color++;
+    } else {
+      box.classList.add("bg_four");
+      wallet_color = 1;
+    }
+
+    h2.innerHTML = item.title.toUpperCase();
+    p.innerHTML = item.currency.toUpperCase();
+
+    place.append(box);
+    box.append(h2, p);
+  }
 }

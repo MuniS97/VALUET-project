@@ -1,4 +1,5 @@
-import { headerCreate, dashboard_create } from "./modules/ui";
+import { getData } from "./modules/helpers";
+import { headerCreate, dashboard_create, reload_wallets } from "./modules/ui";
 import { user } from "./modules/user";
 import Chart from "chart.js/auto";
 
@@ -15,6 +16,15 @@ currentDateText.innerHTML =
 
 let balanceBlock = document.querySelector("#balance1");
 
+let wallets = document.querySelector(".wallets");
+
+getData("/wallets?user_id=" + user.id).then((res) => {
+  if (res.status !== 200 && res.status !== 201) return;
+  reload_wallets(res.data, wallets);
+});
+
+
+// chart.js
 const data = {
   datasets: [
     {

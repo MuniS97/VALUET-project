@@ -8,6 +8,56 @@
       "id": 1
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "user_id": 1,
+      "currency": "RUB",
+      "title": "Visa",
+      "balance": "10000",
+      "id": 1
+    },
+    {
+      "user_id": 1,
+      "currency": "RUB",
+      "title": "MasterCard",
+      "balance": "1000",
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "currency": "RUB",
+      "title": "Humo",
+      "balance": "1000000",
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "currency": "RUB",
+      "title": "UzCard",
+      "balance": "100000",
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "currency": "RUB",
+      "title": "Munis",
+      "balance": "1000",
+      "id": 5
+    },
+    {
+      "user_id": 1,
+      "currency": "RUB",
+      "title": "Bank",
+      "balance": "100000",
+      "id": 6
+    },
+    {
+      "user_id": 1,
+      "currency": "RUB",
+      "title": "Visa 2",
+      "balance": "10000",
+      "id": 7
+    }
+  ],
   "transactions": []
 }
