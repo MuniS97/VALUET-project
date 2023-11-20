@@ -34,6 +34,7 @@ export function headerCreate() {
   headerLeft.append(headerLeftInp, headerLeftImg);
   headerRight.append(headerRightImg1, headerRightImg2);
 }
+
 export function dashboard_create(user) {
   let dashBoard = document.createElement("div");
   let dashTop = document.createElement("div");
@@ -113,6 +114,34 @@ export function dashboard_create(user) {
   topBlock5.append(block5Img, block5text);
   bottomBlock1.append(bBlock1Img, bBlock1Text);
   bottomBlock2.append(bBlock2Img, bBlock2Text);
+
+  let locate = location.pathname.split("/")[2] || "home";
+
+  switch (locate) {
+    case "home":
+      topBlock1.classList.add("btn_active");
+      block1Img.src = "../../public/img/dash_overviews1.svg";
+      break;
+    case "wallets":
+      topBlock2.classList.add("btn_active");
+      block2Img.src = "../../public/img/dash_wallets1.svg";
+      break;
+    case "transactions":
+      topBlock3.classList.add("btn_active");
+      block3Img.src = "../../public/img/dash_transactions1.svg";
+      break;
+    case "exChange":
+      topBlock5.classList.add("btn_active");
+      block5Img.src = "../../public/img/dash_market1.svg";
+      break;
+    case "market":
+      topBlock4.classList.add("btn_active");
+      block4Img.src = "../../public/img/dash_exchange1.svg";
+      break;
+
+    default:
+      break;
+  }
 
   bBlock2Text.onclick = () => {
     let conf = confirm("Are you sure that you want log out?");

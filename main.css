@@ -16,6 +16,17 @@ body {
   margin: 0 auto;
 }
 
+.btn_active {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #32395e;
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
@@ -66,6 +77,8 @@ header .headerLeft input {
   border: none;
   outline-color: #1288e8;
   padding: 0 50px 0 15px;
+  color: white;
+  font-size: 18px;
 }
 header .headerLeft img {
   position: absolute;
@@ -295,8 +308,13 @@ header .headerRight .img2 {
 }
 
 .chartblock {
-  width: 100%;
+  width: 80%;
   border: none;
+  margin: 0 auto;
+}
+.chartBlock2 {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #balance h3 {
@@ -486,7 +504,7 @@ header .headerRight .img2 {
 }
 
 #market {
-  height: fit-content;
+  height: 340px;
   display: flex;
   flex-direction: column;
   justify-content: center;
