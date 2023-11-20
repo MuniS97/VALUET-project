@@ -156,3 +156,45 @@ export function dashboard_create(user) {
     }
   };
 }
+
+export function reload_wallets(arr, place) {
+  place.innerHTML = "";
+
+  let wallet_color = 1;
+
+  if (arr.length == 0) {
+    let p = document.createElement("p");
+    p.innerHTML = "NO WALLETS";
+    p.style.color = "red";
+    place.append(p);
+    return;
+  }
+
+  for (let item of arr) {
+    let box = document.createElement("div");
+    let h2 = document.createElement("h2");
+    let p = document.createElement("p");
+
+    box.classList.add("box");
+
+    if (wallet_color == 1) {
+      box.classList.add("bg_one");
+      wallet_color++;
+    } else if (wallet_color == 2) {
+      box.classList.add("bg_two");
+      wallet_color++;
+    } else if (wallet_color == 3) {
+      box.classList.add("bg_three");
+      wallet_color++;
+    } else {
+      box.classList.add("bg_four");
+      wallet_color = 1;
+    }
+
+    h2.innerHTML = item.title.toUpperCase();
+    p.innerHTML = item.currency.toUpperCase();
+
+    place.append(box);
+    box.append(h2, p);
+  }
+}
